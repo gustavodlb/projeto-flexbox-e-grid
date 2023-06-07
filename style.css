@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  min-height: 40px;
+  background-color: #1d1d1d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 8px 15px;
+}
+
+.logonav {
+  width: 180px;
+}
+
+.headerbutton {
+  display: flex;
+  gap: 15px;
+}
+
+.navbtn {
+  font-size: 16px;
+  padding: 6px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.navbtn:hover {
+  border-bottom: 2px solid black;
+}
+
+.sectiontitle {
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.sectiondescription { 
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #383838;
+}
+
+.gridcontainer {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "maincontent sidebarcontent";
+  padding: 20px;
+  flex: 1 0 auto;
+}
+
+.categorycard:hover {
+  border-color: black;
+}
+
+.maincontent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  grid-area: maincontent;
+}
+
+.categorycard {
+  width: 280px;
+  height: 380px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.maincardimg {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+}
+
+.titulocard {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 6px;
+}
+
+.descriptioncard {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 6px;
+  text-align: justify;
+}
+
+.sidebarcontent {
+  background-color: #383838;
+  color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  grid-area: sidebarcontent;
+  gap: 20px;
+}
+
+.sidebarcard {
+  width: 75%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.sidebar-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.sidebarcard:hover {
+  border-color: gainsboro;
+}
+
+.sidebartitle {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.logofooter {
+  width: 180px;
+}
+
+.footer {
+  width: 100%;
+  min-height: 40px;
+  background-color: #1d1d1d;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 15px;
+}
+
+.footerlink {
+  text-decoration: none;
+  color: white;
+  border-bottom: 2px solid transparent;
+  padding: 6px;
+  transition: .4s;
+}
+
+.footerlink:hover {
+  border-color: black;
+}
+
+@media (max-width: 630px) {
+  .gridcontainer {
+    grid-template-areas: 
+    "maincontent"
+    "sidebarcontent";
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sidebarcontent {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 470px) {
+  .header, .footer {
+    justify-content: center;
+  }
+  
+}
